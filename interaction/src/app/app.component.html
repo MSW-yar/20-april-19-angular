@@ -1,0 +1,20 @@
+<!-- The content below is only a placeholder and can be replaced. -->
+<div style="text-align:center">
+  <h1>Welcome to {{title | titlecase }}!</h1>
+  <p>{{message}}</p>
+  <p>{{name | lowercase}}</p>
+  <p> {{name | uppercase}}</p>
+  <p>'{{5.6789 | number :'1.2-3'}}'</p>
+  <p>'{{5.6789 | number :'3.2-3'}}'</p>
+  <p> '{{25 | percent}}''</p>
+  <p> '{{25 | currency : 'EUR'}}'</p>
+  <p> '{{25 | currency : 'PKR'}}'</p>
+  <p> {{date | date: 'short'}}</p>
+</div>
+<app-child
+  [parentData]="name"
+  [parentDatam]="age"
+  [privacy]="bachi"
+  style="text-align:center"
+  (childEvent)="message= $event"
+></app-child>
